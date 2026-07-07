@@ -7,6 +7,8 @@ export interface FrontMatterResult {
     cover?: string;
     author?: string;
     source_url?: string;
+    pic_crop_235_1?: string;
+    pic_crop_1_1?: string;
     need_open_comment?: boolean;
     only_fans_can_comment?: boolean;
     image_list?: string[];
@@ -19,7 +21,19 @@ export async function handleFrontMatter(markdown: string): Promise<FrontMatterRe
     const { attributes, body } = fm(markdown);
     const result: FrontMatterResult = { content: body || "" };
     let head = "";
-    const { title, description, cover, author, source_url, need_open_comment, only_fans_can_comment, image_list, type } = attributes;
+    const {
+        title,
+        description,
+        cover,
+        author,
+        source_url,
+        pic_crop_235_1,
+        pic_crop_1_1,
+        need_open_comment,
+        only_fans_can_comment,
+        image_list,
+        type,
+    } = attributes;
     if (title) {
         result.title = title;
     }
@@ -35,6 +49,12 @@ export async function handleFrontMatter(markdown: string): Promise<FrontMatterRe
     }
     if (source_url) {
         result.source_url = source_url;
+    }
+    if (pic_crop_235_1) {
+        result.pic_crop_235_1 = String(pic_crop_235_1);
+    }
+    if (pic_crop_1_1) {
+        result.pic_crop_1_1 = String(pic_crop_1_1);
     }
     if (need_open_comment !== undefined) {
         result.need_open_comment = need_open_comment;

@@ -114,7 +114,17 @@ export async function publishToWechatDraft(
     articleOptions: ArticleOptions,
     publishOptions: PublishOptions = {},
 ): Promise<WechatPublishResponse> {
-    const { title, content, cover, author, source_url, need_open_comment, only_fans_can_comment } = articleOptions;
+    const {
+        title,
+        content,
+        cover,
+        author,
+        source_url,
+        pic_crop_235_1,
+        pic_crop_1_1,
+        need_open_comment,
+        only_fans_can_comment,
+    } = articleOptions;
     const { appId, appSecret, relativePath } = publishOptions;
 
     const { appId: appIdFinal, appSecret: appSecretFinal } = await getAppIdAndSecret(appId, appSecret);
@@ -160,6 +170,8 @@ export async function publishToWechatDraft(
         thumb_media_id: thumbMediaId,
         author,
         content_source_url: source_url,
+        pic_crop_235_1,
+        pic_crop_1_1,
         need_open_comment: need_open_comment ? 1 : 0,
         only_fans_can_comment: only_fans_can_comment ? 1 : 0,
     });
