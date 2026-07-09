@@ -17,6 +17,8 @@ export interface ArticleOptions {
     cover?: string;
     author?: string;
     source_url?: string;
+    pic_crop_235_1?: string;
+    pic_crop_1_1?: string;
     need_open_comment?: boolean;
     only_fans_can_comment?: boolean;
 }

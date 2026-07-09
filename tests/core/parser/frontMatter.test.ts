@@ -9,6 +9,8 @@ description: This is a short summary.
 cover: https://example.com/image.png
 author: author_name
 source_url: http://source.com
+pic_crop_235_1: "0_0_1_1"
+pic_crop_1_1: "0_0_0.425532_1"
 need_open_comment: true
 only_fans_can_comment: true
 image_list:
@@ -31,6 +33,8 @@ Here is the rest of the post.`;
             content: "> This is a short summary.\n\n# Main Content\nHere is the rest of the post.",
             author: "author_name",
             source_url: "http://source.com",
+            pic_crop_235_1: "0_0_1_1",
+            pic_crop_1_1: "0_0_0.425532_1",
             need_open_comment: true,
             only_fans_can_comment: true,
             image_list: [

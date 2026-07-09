@@ -30,6 +30,8 @@ export interface WechatPublishOptions {
     content: string;
     thumb_media_id: string;
     content_source_url?: string;
+    pic_crop_235_1?: string;
+    pic_crop_1_1?: string;
     article_type?: "news" | "newspic";
     image_info?: ImageInfo;
     need_open_comment?: 0 | 1;
